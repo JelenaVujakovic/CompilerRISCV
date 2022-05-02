@@ -75,8 +75,8 @@
 "!="        { yylval.i = NEQ; return _RELOP; }
 
     /* NAMES AND VALUES */
-[a-zA-Z][a-zA-Z0-9_]*   { yylval.s = strdup(yytext); return _ID; } // WHY FTN? WHY??? ..... 
-[0-9]{1,10}             { yylval.s = strdup(yytext); return _INT_NUMBER; } /* CAREFULL WITH x = -5; vs 3-5; */
+[a-zA-Z][a-zA-Z0-9_]*   { yylval.s = strdup(yytext); return _ID; }
+[0-9]{1,10}             { yylval.s = strdup(yytext); return _INT_NUMBER; }
 [0-9]{1,10}[uU]         { yylval.s = strdup(yytext); return _UINT_NUMBER; }
 0[xX][0-9a-fA-F]{1,4}   { yylval.s = strdup(yytext); return _HEX_NUMBER;}
 
