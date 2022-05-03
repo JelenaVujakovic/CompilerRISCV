@@ -1593,8 +1593,6 @@ int main(){
 
     syntax_error = yyparse();
     
-    // print_symtab(&head);
-    
     destroy_list(&head);
 
     if(syntax_error)
